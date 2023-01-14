@@ -13,6 +13,7 @@ import java.util.Scanner;
  * @author oscar
  */
 public class ClienteCalcEnumTCP {
+    
     public static void main(String[] args) throws UnknownHostException, IOException {
         System.out.println("Introduce la operacion a realizar, separando los operandos por comas.");
         System.out.println("Introduce la palabra quit para salir (y cerrar tambien el servidor).");
@@ -20,7 +21,7 @@ public class ClienteCalcEnumTCP {
         Scanner teclado = new Scanner(System.in);
         String operacion = teclado.nextLine();
         
-        // Creamos un nuevo objeto socket, conectado al servidor
+        // Creamos un nuevo objeto socket,conectado al servidor
         Socket socket = new Socket("localhost", ServidorCalcEnumTCP.NUM_PUERTO);
 
         // Obtenemos el input stream del socket y abrimos un BufferedReader en el 
